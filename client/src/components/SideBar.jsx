@@ -92,7 +92,7 @@ function SideBar({ name, userId }) {
                     data-tooltip-id="delete-tooltip"
                     data-tooltip-content="Delete Room"
                     data-tooltip-place="top"
-                    className="bg-red-700 h-6 w-6 flex justify-center items-center rounded-md cursor-pointer"
+                    className="bg-red-700 h-6 w-6 flex justify-center items-center rounded-md cursor-pointer ml-1"
                     onClick={() => {
                       toast.info("Feature will be available soon")
                     }}
@@ -104,7 +104,7 @@ function SideBar({ name, userId }) {
                     data-tooltip-id="open-tooltip"
                     data-tooltip-content="Open Room"
                     data-tooltip-place="top"
-                    className="bg-green-500 h-6 w-6 flex justify-center items-center rounded-md cursor-pointer"
+                    className="bg-green-500 h-6 w-6 flex justify-center items-center rounded-md cursor-pointer ml-1"
                     onClick={() => {
                       toast.info("Feature will be available soon")
                     }}

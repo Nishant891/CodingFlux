@@ -40,41 +40,45 @@ const EditorNavbar = (props) => {
             props.setCurrentLang("xml");
             setActiveBtn(1);
           }}
-          className={`flex justify-center items-center text-white h-8 w-16 rounded-sm ${
+          className={`flex justify-center items-center text-white h-auto max-w-full rounded-sm p-2 lg:p-0  ${
             activeBtn == 1 ? "bg-[#0054C6]" : "bg-[#002957]"
           } outline outline-offset-2 outline-[#0054C6] font-semibold`}
         >
-          <span className="text-white flex items-center justify-center gap-1">
-            <AiFillHtml5 className=" bg-[#bc1313] rounded text-[#ffffff]" />{" "}
-            HTML
+          <span className="hidden text-white flex justify-center items-center gap-1 p-1 lg:inline">
+            <AiFillHtml5 className=" bg-[#bc1313] rounded text-[#ffffff] mb-1 lg:inline" />{" "}
+            <p className="inline">HTML</p>
           </span>
+          <AiFillHtml5 className="bg-[#bc1313] rounded text-[#ffffff] lg:hidden"/>{" "}
         </button>
         <button
           onClick={() => {
             props.setCurrentLang("css");
             setActiveBtn(2);
           }}
-          className={`flex justify-center items-center text-white h-8 w-16 rounded-sm ${
+          className={`flex justify-center items-center text-white h-auto max-w-full rounded-sm p-2 lg:p-0 ${
             activeBtn == 2 ? "bg-[#0054C6]" : "bg-[#002957]"
           } outline outline-offset-2 outline-[#0054C6] font-semibold`}
         >
-          <span className="text-white flex items-center justify-center gap-1">
-            <FaCss3Alt className=" bg-[#1359bc] rounded text-[#ffffff] " /> CSS
+          <span className="hidden text-white flex justify-center items-center gap-1 p-1 lg:inline">
+            <FaCss3Alt className="bg-[#1359bc] rounded text-[#ffffff] mb-1 lg:inline" />{" "}
+            <p className="inline">CSS</p>
           </span>
+          <FaCss3Alt className="bg-[#1359bc] rounded text-[#ffffff] lg:hidden"/>{" "}
         </button>
         <button
           onClick={() => {
             props.setCurrentLang("js");
             setActiveBtn(3);
           }}
-          className={`flex justify-center items-center text-white h-8 w-16 rounded-sm ${
+          className={`flex justify-center items-center text-white h-auto max-w-full rounded-sm p-2 lg:p-0 ${
             activeBtn == 3 ? "bg-[#0054C6]" : "bg-[#002957]"
           } outline outline-offset-2 outline-[#0054C6] font-semibold`}
         >
-          <span className="text-white flex items-center justify-center gap-1">
-            <DiJavascript className=" bg-[#F0DB4F] rounded text-[#ffffff] " />{" "}
-            JS
+          <span className="hidden text-white flex justify-center items-center gap-1 p-1 lg:inline">
+            <DiJavascript className="bg-[#F0DB4F] rounded text-[#ffffff] mb-1 lg:inline" />{" "}
+            <p className="inline">JS</p>
           </span>
+          <DiJavascript className="bg-[#F0DB4F] rounded text-[#ffffff] lg:hidden"/>{" "}
         </button>
       </div>
     </div>
