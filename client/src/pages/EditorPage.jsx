@@ -115,6 +115,7 @@ const EditorPage = () => {
         {toggleSidebar ? (
           <EditorSidebar
             codeRef={codeRef}
+            toggleSidebar={toggleSidebar}
             setToggleSidebar={setToggleSidebar}
             roomId={roomId}
             clients={clients}
@@ -129,7 +130,7 @@ const EditorPage = () => {
               : toggleView
               ? "w-9/12"
               : "w-full"
-          } h-full flex flex-row`}
+          } h-full w-full flex flex-row`}
         >
           <CodeEditor
             setSrcDoc={setSrcDoc}
@@ -153,7 +154,7 @@ const EditorPage = () => {
             toggleView={toggleView}
           />
         </div>
-        {toggleView ? <EditorView srcDoc={srcDoc} /> : null}
+        {toggleView ? <EditorView srcDoc={srcDoc} toggleView={toggleView} setToggleView={setToggleView} /> : null}
       </div>
     </>
   );

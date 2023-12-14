@@ -5,11 +5,12 @@ import { AppContext } from "../App.jsx";
 import { databases, account } from "../AppWrite.jsx";
 import { ID } from "appwrite";
 import { toast } from "react-toastify";
-import hamburgerMenu from "../UI_Images/hamburger.svg";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 function DashBoard() {
   //userInput state keeps track of the roomId entered by a user.
   const [userInput, setUserInput] = useState("");
+  const [isHidden, setIsHidden] = useState(true);
   //The user state from App.jsx component is used here to check if a user is no loggedIn and tries to access the dashboard if so it navigates to login page.
   const { user, setUser } = useContext(AppContext);
   const navigate = useNavigate();
@@ -80,20 +81,31 @@ function DashBoard() {
   const handleUserInputChange = (event) => {
     setUserInput(event.target.value);
   };
+
+  const toggleVisibility = () => {
+    setIsHidden(!isHidden)
+  }
   return (
     <>
       <div className="bg-black h-screen width-screen grid grid-cols-4 divide-x divide-slate-400/25">
         <SideBar
+          isHidden={isHidden}
+          toggleVisibility={toggleVisibility}
           name={user == null ? " " : user.name}
           userId={user == null ? "" : user.$id}
         />
-        <div className="col-span-4 lg:col-span-3 bg-[#021325] text-white">
-          <div className="h-10 w-full flex justify-between items-center lg:justify-end">
-            <button
-              className="flex justify-center items-center text-white ml-2 h-10 w-10 rounded-full font-semibold lg:hidden"
+        <div className="col-span-4 lg:col-span-4 bg-[#021325] text-white">
+          
+          <div className={`h-10 w-full flex ${isHidden ? "justify-between" : "justify-end"} items-center lg:justify-end`}>
+            {
+              isHidden ?  <button
+              onClick={toggleVisibility}
+              className="flex justify-center items-center bg-[#2CA9BC] text-white h-8 w-8 rounded-full font-semibold m-2 lg:hidden"
             >
-              <img src={hamburgerMenu} alt="hamburger-menu"></img>
-            </button>
+              <GiHamburgerMenu />
+            </button> : null
+            }
+           
             <button
               onClick={handleLogout}
               className="mr-4 bg-red-600 text-sm w-16 h-8 rounded-md hover:opacity-90"

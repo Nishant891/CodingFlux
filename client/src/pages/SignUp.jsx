@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Signup from "../UI_Images/Signup.jpg";
 import { useFormik } from "formik";
 import { signUpSchema } from "../index.js";
-import register from "../UI_Images/register.svg";
+import { SiGnuprivacyguard } from "react-icons/si";
 import { account } from "../AppWrite.jsx";
 import { ID } from "appwrite";
 import { toast } from "react-toastify";
@@ -66,7 +66,7 @@ const SignUp = () => {
           >
             <div className="w-full h-20 flex flex-col justify-between items-center">
               <button className="rounded-full h-10 w-10 bg-purple-400 flex items-center justify-center">
-                <img className="h-7 w-7 pl-1" src={register} alt="Register" />
+                <SiGnuprivacyguard />
               </button>
               <h1 className="text-2xl text-white text-center">SIGN UP</h1>
             </div>

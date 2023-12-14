@@ -6,6 +6,7 @@ import { AiFillDelete } from "react-icons/ai";
 import { AiFillFolderOpen } from "react-icons/ai";
 import { Tooltip } from "react-tooltip";
 import { toast } from "react-toastify";
+import { RxCross1 } from "react-icons/rx";
 
 //Generates a unique color background color for the Avatar component.
 function stringToColor(string) {
@@ -46,7 +47,7 @@ function stringAvatar(name) {
     children: `${name.split(" ")[0][0]}${name.split(" ")[1][0]}`,
   };
 }
-function SideBar({ name, userId }) {
+function SideBar({ name, userId, isHidden, toggleVisibility }) {
   const [rooms, setRooms] = useState([]);
 
   useEffect(() => {
@@ -69,24 +70,42 @@ function SideBar({ name, userId }) {
     fetchRooms();
   }, [userId]);
   return (
-    <div className="text-white bg-[#021325] hidden lg:block">
-      <div className="bg-transparent w-full h-full flex flex-col gap-4 justify-start items-center">
+    <div
+      className={`text-white bg-[#021325] fixed left-0 top-0 h-full max-w-[20rem] md:max-w-[40rem] border-r lg:visible ${
+        isHidden ? "invisible" : "visible"
+      }`}
+    >
+      <div className="max-w-[20rem] h-full flex flex-col gap-4 justify-start items-center">
         <div className="w-11/12 h-1/5 rounded-xl flex flex-col gap-3 justify-center items-center mt-4">
+          <div className="w-full flex items-center justify-end">
+          {
+              isHidden ? null : <button
+              onClick={toggleVisibility}
+              className="flex justify-center items-center bg-[#2CA9BC] text-white h-8 w-8 rounded-full font-semibold lg:hidden"
+            >
+              <RxCross1 />
+            </button>
+            }
+
+          </div>
           <div
-            className={`w-16 h-16 rounded-full outline outline-offset-2 outline-slate-600 mt-4 flex flex-col justify-center items-center`}
+            className={`w-16 h-16 rounded-full outline outline-offset-2 outline-slate-600 mt-2 flex flex-col justify-center items-center`}
           >
             <Avatar {...stringAvatar(`${name}`)} />
           </div>
           <h1>Hello {name.split(" ")[0]}</h1>
         </div>
-        <div className="h-auto max-w-full mb-4 rounded-xl outline outline-offset-2 outline-slate-600 mt-4 px-4">
+        <div className="max-h-[30rem] w-11/12 mb-4 rounded-xl outline outline-offset-2 outline-slate-600 mt-5 px-4">
           <div className="border-b-2 border-slate-400/25 h-10 flex justify-center items-center">
             <p>ROOMS</p>
           </div>
-          <div className="w-full h-[60vh] mt-1 px-1 overflow-y-scroll">
+          <div className="w-full max-h-[22rem] mt-1 px-1 overflow-y-scroll">
             {rooms.map((room) => {
               return (
-                <div key={room} className="w-full border-b border-slate-400/25 h-8 mb-2 flex flex-row justify-evenly items-center">
+                <div
+                  key={room}
+                  className="w-full border-b border-slate-400/25 h-8 mb-2 flex flex-row justify-evenly items-center"
+                >
                   <p>{room}</p>
                   <a
                     data-tooltip-id="delete-tooltip"
@@ -94,9 +113,9 @@ function SideBar({ name, userId }) {
                     data-tooltip-place="top"
                     className="bg-red-700 h-6 w-6 flex justify-center items-center rounded-md cursor-pointer ml-1"
                     onClick={() => {
-                      toast.info("Feature will be available soon")
+                      toast.info("Feature will be available soon");
                     }}
-                    >
+                  >
                     <AiFillDelete />
                   </a>
                   <Tooltip id="delete-tooltip" />
@@ -106,7 +125,7 @@ function SideBar({ name, userId }) {
                     data-tooltip-place="top"
                     className="bg-green-500 h-6 w-6 flex justify-center items-center rounded-md cursor-pointer ml-1"
                     onClick={() => {
-                      toast.info("Feature will be available soon")
+                      toast.info("Feature will be available soon");
                     }}
                   >
                     <AiFillFolderOpen />

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import login from "../UI_Images/Login.jpg";
-import login_svg from "../UI_Images/login.svg";
+import { SlLogin } from "react-icons/sl";
 import { loginSchema } from "../index.js";
 import { account } from "../AppWrite.jsx";
 import { toast } from "react-toastify";
@@ -59,8 +59,8 @@ const LogIn = () => {
           className="h-3/5 w-3/5 flex flex-col justify-evenly"
         >
           <div className="w-full h-20 flex flex-col justify-between items-center">
-            <button className="rounded-full h-10 w-10 bg-purple-400 flex items-center justify-center">
-              <img className="h-7 w-7 pr-1" src={login_svg} alt="Register" />
+            <button className="rounded-full h-10 w-10 pr-1 bg-purple-400 flex items-center justify-center">
+              <SlLogin />
             </button>
             <h1 className="text-2xl text-white text-center">LOGIN</h1>
           </div>

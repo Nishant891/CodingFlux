@@ -1,5 +1,5 @@
 import { useState } from "react";
-import cross from "../UI_Images/cross.svg";
+import { RxCross1 } from "react-icons/rx";
 import { Tooltip } from "react-tooltip";
 import Client from "./Client";
 import { useNavigate } from "react-router-dom";
@@ -48,15 +48,15 @@ const EditorSidebar = ({codeRef, setToggleSidebar,
     })
   }
   return (
-    <div className="bg-[#0c1a29] w-1/12 h-full border-r border-slate-800">
+    <div className={`fixed left-0 top-0 z-10 w-[8rem] lg:static bg-[#0c1a29] lg:w-1/12 h-full border-r border-slate-800`}>
       <div className="w-full h-14 flex items-center justify-end text-white">
         <button
           onClick={() => {
             setToggleSidebar(false);
           }}
-          className="text-white h-1/6 w-10 rounded-full mr-3 mb-8 font-semibold"
+          className="flex justify-center items-center bg-[#2CA9BC] text-white h-8 w-8 rounded-full font-semibold m-1"
         >
-          <img src={cross} alt="cross" className="object-cover"></img>
+          <RxCross1 />
         </button>
       </div>
       <div className="w-full h-1/6 flex flex-col items-center justify-evenly">
