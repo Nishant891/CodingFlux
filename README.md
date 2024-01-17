@@ -10,7 +10,53 @@
 2. email : test02@gmail.com
    password : Qwertyu@13
 
-## BLOG - _[CODINGFLUX BLOG]_(https://4learners.hashnode.dev/coding-flux-a-collaborative-web-editor)
+## GETTING STARTED
+
+### Development
+
+1. Clone the project in your local machine run
+
+`https://github.com/Nishant891/CodingFlux.git`
+
+### Frontend
+
+2. run
+
+`cd client`
+
+3. and then run 
+
+`npm install`
+
+4. Create a .env file and copy the contents of .env.example in it.
+
+5. Go to appwrite create an account and create an new organization.
+
+6. Create a new project and go to it's setting get the API ENDPOINT and PROJECT ID and paste it in REACT_APP_API_ENDPOINT and REACT_APP_PROJECT_ID in .env file respectively.
+
+7. In the database section create a new database as CodingFlux Database or any.
+
+8. Create a new collection as Rooms and then create it's attribute xml, css, js and userId all of type string.
+
+9. Then 
+
+`npm run start`
+
+### Backend
+
+10. run
+
+`cd server`
+
+11. and then run
+
+`npm install`
+
+12. now run 
+
+`npm start`
+
+13. Copy and paste your localhost url in REACT_APP_BACKEND_URL
 
 ## SNAPSHOTS
 
