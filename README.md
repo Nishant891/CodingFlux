@@ -4,13 +4,11 @@
 
 ### Dummy Test Users
 
-1.
-email : test01@gmail.com
-password : Asdfghj@13
+1. email : test01@gmail.com
+   password : Asdfghj@13
 
-2.
-email : test02@gmail.com
-password : Qwertyu@13
+2. email : test02@gmail.com
+   password : Qwertyu@13
 
 ## BLOG - _[CODINGFLUX BLOG]_(https://4learners.hashnode.dev/coding-flux-a-collaborative-web-editor)
 
