@@ -4,11 +4,11 @@
 
 ### Dummy Test Users
 
-1. User 1
+1.
 email : test01@gmail.com
 password : Asdfghj@13
 
-3. User 2
+2.
 email : test02@gmail.com
 password : Qwertyu@13
 
