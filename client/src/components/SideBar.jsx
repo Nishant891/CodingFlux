@@ -56,8 +56,8 @@ function SideBar({ name, userId, isHidden, toggleVisibility }) {
       if (userId) {
         try {
           const documents = await databases.listDocuments(
-            "6471d0c7a377ea50a9e7",
-            "6471d37c47aba841fc16",
+            process.env.REACT_APP_DATABASE_ID,
+            process.env.REACT_APP_COLLECTION_ID,
             [Query.equal("userId", [userId])]
           );
           const rooms = documents.documents.map((doc) => {
@@ -75,18 +75,17 @@ function SideBar({ name, userId, isHidden, toggleVisibility }) {
         isHidden ? "invisible" : "visible"
       }`}
     >
-      <div className="max-w-[20rem] h-full flex flex-col gap-4 justify-start items-center">
+      <div className="w-[18rem] h-full flex flex-col gap-4 justify-start items-center">
         <div className="w-11/12 h-1/5 rounded-xl flex flex-col gap-3 justify-center items-center mt-4">
           <div className="w-full flex items-center justify-end">
-          {
-              isHidden ? null : <button
-              onClick={toggleVisibility}
-              className="flex justify-center items-center bg-[#2CA9BC] text-white h-8 w-8 rounded-full font-semibold lg:hidden"
-            >
-              <RxCross1 />
-            </button>
-            }
-
+            {isHidden ? null : (
+              <button
+                onClick={toggleVisibility}
+                className="flex justify-center items-center bg-[#2CA9BC] text-white h-8 w-8 rounded-full font-semibold lg:hidden"
+              >
+                <RxCross1 />
+              </button>
+            )}
           </div>
           <div
             className={`w-16 h-16 rounded-full outline outline-offset-2 outline-slate-600 mt-2 flex flex-col justify-center items-center`}
@@ -95,11 +94,11 @@ function SideBar({ name, userId, isHidden, toggleVisibility }) {
           </div>
           <h1>Hello {name.split(" ")[0]}</h1>
         </div>
-        <div className="max-h-[30rem] w-11/12 mb-4 rounded-xl outline outline-offset-2 outline-slate-600 mt-5 px-4">
-          <div className="border-b-2 border-slate-400/25 h-10 flex justify-center items-center">
+        <div className="max-h-[36rem] w-11/12 mt-5">
+          <div className="border-b-2 border-slate-400/25 w-full h-10 flex justify-center items-center">
             <p>ROOMS</p>
           </div>
-          <div className="w-full max-h-[22rem] mt-1 px-1 overflow-y-scroll">
+          <div className="w-full max-h-[25rem] mt-1 px-1 overflow-y-scroll">
             {rooms.map((room) => {
               return (
                 <div
@@ -111,7 +110,7 @@ function SideBar({ name, userId, isHidden, toggleVisibility }) {
                     data-tooltip-id="delete-tooltip"
                     data-tooltip-content="Delete Room"
                     data-tooltip-place="top"
-                    className="bg-red-700 h-6 w-6 flex justify-center items-center rounded-md cursor-pointer ml-1"
+                    className="bg-red-700 h-6 w-6 flex justify-center items-center rounded-sm cursor-pointer ml-1"
                     onClick={() => {
                       toast.info("Feature will be available soon");
                     }}
@@ -123,7 +122,7 @@ function SideBar({ name, userId, isHidden, toggleVisibility }) {
                     data-tooltip-id="open-tooltip"
                     data-tooltip-content="Open Room"
                     data-tooltip-place="top"
-                    className="bg-green-500 h-6 w-6 flex justify-center items-center rounded-md cursor-pointer ml-1"
+                    className="bg-green-500 h-6 w-6 flex justify-center items-center rounded-sm cursor-pointer ml-1"
                     onClick={() => {
                       toast.info("Feature will be available soon");
                     }}

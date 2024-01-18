@@ -27,7 +27,7 @@ const EditorNavbar = (props) => {
           }}
           className={`flex justify-center items-center text-white h-auto max-w-full rounded-sm p-2 lg:p-0  ${
             activeBtn == 1 ? "bg-[#0054C6]" : "bg-[#002957]"
-          } outline outline-offset-2 outline-[#0054C6] font-semibold m-1`}
+          } font-semibold m-1`}
         >
           <span className="hidden text-white flex justify-center items-center gap-1 p-1 lg:inline">
             <AiFillHtml5 className=" bg-[#bc1313] rounded text-[#ffffff] mb-1 lg:inline" />{" "}
@@ -42,7 +42,7 @@ const EditorNavbar = (props) => {
           }}
           className={`flex justify-center items-center text-white h-auto max-w-full rounded-sm p-2 lg:p-0 ${
             activeBtn == 2 ? "bg-[#0054C6]" : "bg-[#002957]"
-          } outline outline-offset-2 outline-[#0054C6] font-semibold m-1`}
+          } font-semibold m-1`}
         >
           <span className="hidden text-white flex justify-center items-center gap-1 p-1 lg:inline">
             <FaCss3Alt className="bg-[#1359bc] rounded text-[#ffffff] mb-1 lg:inline" />{" "}
@@ -57,7 +57,7 @@ const EditorNavbar = (props) => {
           }}
           className={`flex justify-center items-center text-white h-auto w-auto rounded-sm p-2 lg:p-0 ${
             activeBtn == 3 ? "bg-[#0054C6]" : "bg-[#002957]"
-          } outline outline-offset-2 outline-[#0054C6] font-semibold m-1`}
+          } font-semibold m-1`}
         >
           <span className="hidden text-white flex justify-center items-center gap-1 p-1 lg:inline">
             <DiJavascript className="bg-[#F0DB4F] rounded text-[#ffffff] mb-1 lg:inline" />{" "}

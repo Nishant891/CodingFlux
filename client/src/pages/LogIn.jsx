@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
-import login from "../UI_Images/Login.jpg";
+import login from "../assets/Login.jpg";
 import { SlLogin } from "react-icons/sl";
-import { loginSchema } from "../index.js";
+import { loginSchema } from "../schema.js";
 import { account } from "../AppWrite.jsx";
 import { toast } from "react-toastify";
+import FormInput from "../components/FormInput.jsx";
 
 const LogIn = () => {
   const navigate = useNavigate();
@@ -33,25 +34,24 @@ const LogIn = () => {
   //touched is used to know if the cursor is currently active or the focus has shifted and display the error accorrdingly.
   //when isSubmitting is true the submit button is disabled so mutiple requests is not sent.
 
-  const {
-    values,
-    isSubmitting,
-    handleSubmit,
-    handleChange,
-    handleBlur,
-  } = useFormik({
-    initialValues: {
-      email: "",
-      password: "",
-    },
-    validationSchema: loginSchema,
-    onSubmit,
-  });
+  const { values, isSubmitting, handleSubmit, handleChange, handleBlur } =
+    useFormik({
+      initialValues: {
+        email: "",
+        password: "",
+      },
+      validationSchema: loginSchema,
+      onSubmit,
+    });
 
   return (
     <div className="w-screen h-screen flex flex-row justify-between items-center overflow-hidden">
       <div className="hidden md:h-full md:w-1/2 md:block">
-        <img src={login} className="object-contain h-full" alt="Sign Up Image" />
+        <img
+          src={login}
+          className="object-contain h-full"
+          alt="Sign Up Image"
+        />
       </div>
       <div className="h-full w-full md:w-1/2 bg-[#0054C6] flex justify-center items-center md:rounded-l-lg">
         <form
@@ -59,30 +59,26 @@ const LogIn = () => {
           className="h-3/5 w-3/5 flex flex-col justify-evenly"
         >
           <div className="w-full h-20 flex flex-col justify-between items-center">
-            <button className="rounded-full h-10 w-10 pr-1 bg-purple-400 flex items-center justify-center">
+            <span className="rounded-full h-10 w-10 pr-1 bg-purple-400 flex items-center justify-center">
               <SlLogin />
-            </button>
+            </span>
             <h1 className="text-2xl text-white text-center">LOGIN</h1>
           </div>
           <div>
-            <input
+            <FormInput
               id="email"
               value={values.email}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              className="border-0 h-14 w-full rounded-xl px-4 text-lg outline-none placeholder:text-slate-700"
-              placeholder="Email"
-            ></input>
+              handleChange={handleChange}
+              handleBlur={handleBlur}
+            />
           </div>
           <div>
-            <input
+            <FormInput
               id="password"
               value={values.password}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              className="border-0 h-14 w-full rounded-xl px-4 text-lg outline-none placeholder:text-slate-700"
-              placeholder="Password"
-            ></input>
+              handleChange={handleChange}
+              handleBlur={handleBlur}
+            />
           </div>
           <div>
             <button
