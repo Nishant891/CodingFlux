@@ -36,8 +36,8 @@ function DashBoard() {
       const userId = user.$id;
       //Creates a room with the roomId same as documentId for user and adds a new column to the database.
       const documentID = await databases.createDocument(
-        "6471d0c7a377ea50a9e7",
-        "6471d37c47aba841fc16",
+        process.env.REACT_APP_DATABASE_ID,
+        process.env.REACT_APP_COLLECTION_ID,
         ID.unique(),
         { xml: "", css: "", js: "", userId: userId }
       );

@@ -88,8 +88,8 @@ const EditorPage = () => {
     const saveData = async (data) => {
       try {
         await databases.updateDocument(
-          "6471d0c7a377ea50a9e7",
-          "6471d37c47aba841fc16",
+          process.env.REACT_APP_DATABASE_ID,
+          process.env.REACT_APP_COLLECTION_ID,
           roomId,
           {
             xml: data.xml,
