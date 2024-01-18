@@ -75,10 +75,6 @@ npm install
 npm start
 ```
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a2abc5035f36394dd864a1124ad0d3a46c31576e
 14. Copy and paste your localhost url in REACT_APP_BACKEND_URL
 
 ## SNAPSHOTS
