@@ -12,7 +12,7 @@
 
 ## GETTING STARTED
 
-### Development
+### Setup
 
 1. Clone the project in your local machine run
 
