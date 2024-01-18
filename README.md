@@ -16,17 +16,25 @@
 
 1. Clone the project in your local machine run
 
-`https://github.com/Nishant891/CodingFlux.git`
+```
+git clone "https://github.com/Nishant891/CodingFlux.git"
+```
 
 ### Frontend
 
 2. run
 
-`cd client`
+```
+cd client
+```
+
 
 3. and then run 
 
-`npm install`
+```
+npm install
+```
+
 
 4. Create a .env file and copy the contents of .env.example in it.
 
@@ -34,29 +42,43 @@
 
 6. Create a new project and go to it's setting get the API ENDPOINT and PROJECT ID and paste it in REACT_APP_API_ENDPOINT and REACT_APP_PROJECT_ID in .env file respectively.
 
-7. In the database section create a new database as CodingFlux Database or any.
+7. In the database section create a new database and paste the database id in REACT_APP_DATABASE_ID in .env.
 
-8. Create a new collection as Rooms and then create it's attribute xml, css, js and userId all of type string.
+8. Create a new collection as Rooms and paste the collection id in REACT_APP_COLLECTION_ID in .env and then create it's attribute xml, css, js with size 20000 respectively and userId with size 500 all of type string.
 
-9. Then 
+9. In the same collection go to it's setting, scroll down to the permissions section and add permission Users and select all the CRUD operations.
 
-`npm run start`
+10. Then 
+
+```
+npm run start
+```
+
 
 ### Backend
 
-10. run
+11. run
 
-`cd server`
+```
+cd server
+```
 
-11. and then run
 
-`npm install`
+12. and then run
 
-12. now run 
+```
+npm install
+```
 
-`npm start`
 
-13. Copy and paste your localhost url in REACT_APP_BACKEND_URL
+13. now run 
+
+```
+npm start
+```
+
+
+14. Copy and paste your localhost url in REACT_APP_BACKEND_URL
 
 ## SNAPSHOTS
 
