@@ -6,7 +6,7 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-screen h-screen sm:h-[52rem] flex flex-col justify-center items-center text-white bg-custom-image bg-cover bg-center pt-10 sm:pt-24">
+    <div className="w-screen h-screen sm:h-[52rem] flex flex-col justify-center items-center text-white background pt-10 sm:pt-20">
       <div className="max-w-[36rem] text-center space-y-4 sm:py-10">
         <p className="text-3xl sm:text-3xl bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text">
           CODING FLUX

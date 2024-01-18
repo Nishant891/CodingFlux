@@ -13,9 +13,8 @@ html,body{
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.bg-custom-image {
-  background-image: url('../src/assets/bgImage.png');
-  /* Additional background properties can be added here. */
+.background {
+  background-image: linear-gradient(180deg, rgba(2,0,36,1) 59%, rgb(11, 11, 103) 100%, rgba(0,212,255,1) 100%);
 }
 
 .custom-shadow-green-blue {
