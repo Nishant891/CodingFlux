@@ -2,6 +2,10 @@
 
 ## WEBSITE - _[CODING FLUX]_(https://codingflux.vercel.app/)
 
+### How to use ?
+
+User onboarding is simple. Create an account to navigate to the dashboard. In the dashboard, create a room to open your code editor, copy the roomId, and send it to other collaborators. Voilà! Now you are all connected, able to see their edits and work together.
+
 ### Dummy Test Users
 
 1. email : test01@gmail.com
@@ -32,7 +36,6 @@ cd client
 ```
 npm install
 ```
-
 
 4. Create a .env file and copy the contents of .env.example in it.
 
@@ -112,8 +115,6 @@ npm start
 5. Users have the option to save the code on their local machines.
 
 6. The system incorporates a robust notification system, form validation, and tooltips.
-
-User onboarding is simple. Create an account to navigate to the dashboard. In the dashboard, create a room to open your code editor, copy the roomId, and send it to other collaborators. Voilà! Now you are all connected, able to see their edits and work together.
 
 ## TECH STACK
 
