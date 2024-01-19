@@ -80,28 +80,6 @@ npm start
 
 14. Copy and paste your localhost url in REACT_APP_BACKEND_URL
 
-## SNAPSHOTS
-
-### HOME PAGE 
-
-<img width="960" alt="Screenshot 2023-11-29 204026" src="https://github.com/Nishant891/CodingFlux/assets/109356848/b83cc6db-b72e-4c04-b5c3-f49838cbae5b">
-
-### SIGNUP PAGE
-
-<img width="960" alt="Screenshot 2023-11-29 204044" src="https://github.com/Nishant891/CodingFlux/assets/109356848/76670a3e-6f24-46c8-8b1c-913216e007a0">
-
-### LOGIN PAGE
-
-<img width="960" alt="Screenshot 2023-11-29 204059" src="https://github.com/Nishant891/CodingFlux/assets/109356848/3b6ab5bf-c664-4ae9-99d4-69f14eaf9620">
-
-### DASHBOARD
-
-<img width="960" alt="Screenshot 2023-11-29 204121" src="https://github.com/Nishant891/CodingFlux/assets/109356848/f3975169-d147-4707-bdec-9557690168c2">
-
-### CODE EDITOR
-
-<img width="960" alt="Screenshot 2023-11-22 111544" src="https://github.com/Nishant891/CodingFlux/assets/109356848/6a251b0e-717c-4b9d-8b3c-5531643ba0d8">
-
 ## FEATURES
 
 1. Multiple people can type and edit code simultaneously in the editor while seeing the live preview. Great for long-distance pair programming and conducting interviews.
