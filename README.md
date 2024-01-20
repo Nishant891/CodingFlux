@@ -45,11 +45,13 @@ npm install
 
 7. In the database section create a new database and paste the database id in REACT_APP_DATABASE_ID in .env.
 
-8. Create a new collection as Rooms and paste the collection id in REACT_APP_COLLECTION_ID in .env and then create it's attribute xml, css, js with size 20000 respectively and userId with size 500 all of type string.
+8. Create a new collection as Rooms and paste the collection id in REACT_APP_COLLECTION_ID in .env 
 
-9. In the same collection go to it's setting, scroll down to the permissions section and add permission Users and select all the CRUD operations.
+9. Then create it's attribute in the Attribute tab xml, css, js with size 20000 respectively and userId with size 500 all of type string.
 
-10. Then 
+10. In the same Settings tab scroll down to the permissions section and add permission Users and select all the CRUD operations.
+
+11. Then 
 
 ```
 npm run start
@@ -58,27 +60,27 @@ npm run start
 
 ### Backend
 
-11. run
+12. run
 
 ```
 cd server
 ```
 
 
-12. and then run
+13. and then run
 
 ```
 npm install
 ```
 
 
-13. now run 
+14. now run 
 
 ```
 npm start
 ```
 
-14. Copy and paste your localhost url in REACT_APP_BACKEND_URL
+15. Copy and paste your localhost url in REACT_APP_BACKEND_URL
 
 ## FEATURES
 
@@ -122,5 +124,4 @@ I have acquired great knowledge and learned to stay persistent. I learned that t
 Later, I participated in the Appwrite month-long hackathon in June. Here, I developed the signup/login and logout mechanism using Appwrite BaaS, incorporating proper form validation with Formik and Yup. I utilized Appwrite's database for data storage. I replaced my Express-Socket server with Appwrite's real-time feature, though it wasn't a great success.
 
 Subsequently, I enhanced the frontend by splitting a page into different sections, creating individual components, organizing the project with dedicated folders, adding comments, and writing documentation. I redeveloped the backend using Express and Socket.io. Along the way, I learned to use other libraries like react-router-dom, CodeMirror, react-toastify, react-tooltip, react-icons, MUI, and nodemon. I realized how important it is to read documentation thoroughly when using a library or framework.
-
 
