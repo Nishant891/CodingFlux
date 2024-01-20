@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
-import login from "../assets/Login.jpg";
+import login from "../assets/Login.webp";
 import { SlLogin } from "react-icons/sl";
 import { loginSchema } from "../schema.js";
 import { account } from "../AppWrite.jsx";

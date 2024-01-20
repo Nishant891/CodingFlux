@@ -21,6 +21,12 @@ html,body{
   box-shadow: 0 35px 60px -15px rgba(0, 255, 0, 0.3), 0 -35px 60px -15px rgba(0, 0, 255, 0.3);
 }
 
+@media (max-width: 640px) {
+  .hide-icon {
+    display: none;
+  }
+}
+
 body::-webkit-scrollbar{
 display: none;
 }

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Signup from "../assets/Signup.jpg";
+import Signup from "../assets/Signup.webp";
 import { useFormik } from "formik";
 import { signUpSchema } from "../schema.js";
 import { SiGnuprivacyguard } from "react-icons/si";
