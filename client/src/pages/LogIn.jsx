@@ -89,7 +89,7 @@ const LogIn = () => {
               LOGIN
             </button>
           </div>
-          <div className=" text-center text-white underline text-sm hover:cursor-pointer hover:text-blue-300 md:text-right">
+          <div className="text-center text-white underline text-sm hover:cursor-pointer hover:text-blue-300 md:text-right">
             <p
               onClick={() => {
                 navigate("/signup");
