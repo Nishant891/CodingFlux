@@ -117,11 +117,4 @@ npm start
 6. formik
 7. yup
 
-###  My Experience
-
-I have acquired great knowledge and learned to stay persistent. I learned that the best way to learn is to go and do it yourself. In April 2023, I had an idea to build a real-time collaborative code editor and started working on it. I participated in my college hackathon, during which I learned React.js. I used React Hooks such as useState, useEffect, useRef, useContext, and useCallback to create a minimal frontend. Additionally, I learned Socket.io for real-time data transfer.
-
-Later, I participated in the Appwrite month-long hackathon in June. Here, I developed the signup/login and logout mechanism using Appwrite BaaS, incorporating proper form validation with Formik and Yup. I utilized Appwrite's database for data storage. I replaced my Express-Socket server with Appwrite's real-time feature, though it wasn't a great success.
-
-Subsequently, I enhanced the frontend by splitting a page into different sections, creating individual components, organizing the project with dedicated folders, adding comments, and writing documentation. I redeveloped the backend using Express and Socket.io. Along the way, I learned to use other libraries like react-router-dom, CodeMirror, react-toastify, react-tooltip, react-icons, MUI, and nodemon. I realized how important it is to read documentation thoroughly when using a library or framework.
 
